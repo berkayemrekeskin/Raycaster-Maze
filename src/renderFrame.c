@@ -2,6 +2,7 @@
 #include "../inc/constants.h"
 #include "../inc/player.h"
 #include "../inc/map.h"
+#include "renderMiniMap.c"
 
 void renderFrame(SDL_Renderer* renderer)
 {   
@@ -90,7 +91,7 @@ void renderFrame(SDL_Renderer* renderer)
             case 1: color = (SDL_Color){255, 0, 0, 255}; break;
             case 2: color = (SDL_Color){0, 255, 0, 255}; break;
             case 3: color = (SDL_Color){0, 0, 255, 255}; break;
-            case 4: color = (SDL_Color){255, 255, 255, 255}; break;
+            case 4: color = (SDL_Color){255, 0, 255, 255}; break;
             default: color = (SDL_Color){255, 255, 0, 255}; break;
         }
         
@@ -103,5 +104,11 @@ void renderFrame(SDL_Renderer* renderer)
 
         SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
         SDL_RenderDrawLine(renderer, x, drawStart, x, drawEnd);
+        
     }
+
+    const Uint8* state = SDL_GetKeyboardState(NULL);
+    if(state[SDL_SCANCODE_M])
+        renderMiniMap(renderer);
+
 }

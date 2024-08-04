@@ -59,6 +59,7 @@ int main(int argc, char* argv[])
         SDL_RenderClear(renderer);
         renderFrame(renderer);
         SDL_RenderPresent(renderer);
+
     }
 
     SDL_DestroyRenderer(renderer);

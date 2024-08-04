@@ -9,5 +9,8 @@
 #define FOV 60
 #define NUM_RAYS SCREEN_WIDTH
 #define MAX_DEPTH 30
+#define MINIMAP_SCALE 0.1
+#define MINIMAP_TILE_SIZE (TILE_SIZE * MINIMAP_SCALE)
+#define MINIMAP_PLAYER_SIZE 4
 
 #endif
