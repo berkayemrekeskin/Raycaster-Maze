@@ -13,7 +13,5 @@ This project is a raycasting maze game written in C. The game features a 2D maze
   - `5` represents the prize at the end of the maze
 - Simple user interface for player control
 
-<video width="640" height="360" controls>
-  <source src="/vid/raycaster.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/630e2a18-f048-4c98-80cf-1ff99fd3b9b5
+
